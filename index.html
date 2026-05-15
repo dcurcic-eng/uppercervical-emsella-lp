@@ -1,0 +1,1323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BTL Emsella · Boca Raton · Upper Cervical Institute of Florida</title>
+<meta name="description" content="Six 28 minute sessions in the BTL Emsella chair retrain the muscles you cannot reach with Kegels. Fully clothed. Zero downtime. Boca Raton." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Roboto:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent-link:#CC3366;
+    --brand-green:#65B32E;
+    --brand-green-dark:#4F8E22;
+    --brand-green-light:#7EBA3A;
+    --brand-green-mist:#EEF6E7;
+    --brand-navy:#203667;
+    --brand-navy-deep:#101D3E;
+    --brand-navy-soft:#E5E9F2;
+    --off-black:#0E0E10;
+    --surface-bg:#F4F4F4;
+    --surface-cream:#FAF7F1;
+    --surface-soft:#D0D5D2;
+    --surface-white:#FFFFFF;
+    --text-body:#333333;
+    --text-headline:#313243;
+    --text-muted:#69727D;
+    --text-soft:#A6ACB4;
+    --warm-gold:#C9A55A;
+    --font-body:'Inter',Helvetica,Arial,sans-serif;
+    --font-display:'Poppins',sans-serif;
+    --font-ui:'Roboto',sans-serif;
+    --ease-out:cubic-bezier(.22,1,.36,1);
+    --ease-soft:cubic-bezier(.4,0,.2,1);
+    --dur-fast:200ms;
+    --dur:300ms;
+    --dur-slow:700ms;
+    --max:1440px;
+    --pad:80px;
+    --shadow-card:0 0 10px rgba(0,0,0,.08);
+    --shadow-lift:0 18px 48px rgba(14,29,62,.18);
+    --shadow-soft:0 8px 24px rgba(14,29,62,.10);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:var(--text-body);font:400 16px/1.5 var(--font-body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;border:0;background:none;cursor:pointer;color:inherit}
+  ::selection{background:var(--brand-green);color:#fff}
+
+  /* Layout */
+  .wrap{max-width:var(--max);margin:0 auto}
+  .section{padding:64px var(--pad)}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 800ms var(--ease-out),transform 800ms var(--ease-out)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal-left{opacity:0;transform:translateX(-32px);transition:opacity 800ms var(--ease-out),transform 800ms var(--ease-out)}
+  .reveal-left.in{opacity:1;transform:none}
+  .reveal-zoom{opacity:0;transform:scale(.94);transition:opacity 700ms var(--ease-out),transform 700ms var(--ease-out)}
+  .reveal-zoom.in{opacity:1;transform:none}
+  [data-stagger="1"]{transition-delay:80ms}
+  [data-stagger="2"]{transition-delay:160ms}
+  [data-stagger="3"]{transition-delay:240ms}
+  [data-stagger="4"]{transition-delay:320ms}
+  [data-stagger="5"]{transition-delay:400ms}
+
+  /* Header */
+  .header{position:sticky;top:0;z-index:60;background:var(--brand-navy-deep);color:#fff}
+  .header-row{display:flex;align-items:center;justify-content:space-between;padding:16px 56px;max-width:var(--max);margin:0 auto;height:84px}
+  .h-left{display:flex;align-items:center;gap:36px}
+  .h-logo{display:block;width:148px;height:42px}
+  .h-logo img{width:100%;height:100%;object-fit:contain}
+  .h-nav{display:flex;align-items:center;gap:28px;padding-left:16px;border-left:1px solid rgba(255,255,255,.12);height:32px}
+  .h-nav a{color:rgba(255,255,255,.82);font:500 14px/1 var(--font-body);transition:color var(--dur) var(--ease-out)}
+  .h-nav a:hover{color:var(--brand-green)}
+  .h-right{display:flex;align-items:center;gap:14px}
+  .h-phone{display:flex;align-items:center;gap:8px;font:600 14px/1 var(--font-body);color:#fff;transition:color var(--dur) var(--ease-out)}
+  .h-phone:hover{color:var(--brand-green)}
+  .h-phone-dot{width:8px;height:8px;border-radius:50%;background:var(--brand-green);box-shadow:0 0 0 0 rgba(101,179,46,.55);animation:pulse 2.6s infinite var(--ease-soft)}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(101,179,46,.6)}
+    70%{box-shadow:0 0 0 12px rgba(101,179,46,0)}
+    100%{box-shadow:0 0 0 0 rgba(101,179,46,0)}
+  }
+  .h-cta{background:var(--brand-green);color:#fff;font:500 14px/1 var(--font-ui);padding:13px 20px;border-radius:4px;transition:transform var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out),background var(--dur) var(--ease-out)}
+  .h-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(101,179,46,.45);background:var(--brand-green-light)}
+  .h-cta:active{transform:translateY(0)}
+
+  /* Hero */
+  .hero{position:relative;height:740px;background:var(--brand-navy-deep);color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;width:100%;background:#000 center/cover no-repeat}
+  .hero-fade{position:absolute;inset:0 auto 0 0;width:60%;background:linear-gradient(90deg,var(--brand-navy-deep) 0%,rgba(16,29,62,.85) 40%,rgba(16,29,62,0) 100%);pointer-events:none}
+  .hero-fade::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 60% at 20% 30%,rgba(101,179,46,.10),transparent 60%);pointer-events:none}
+  .hero-inner{position:relative;z-index:2;max-width:var(--max);margin:0 auto;padding:80px 56px;display:flex;flex-direction:column;gap:24px;height:740px;justify-content:flex-start;align-items:flex-start;width:100%}
+  .hero-inner > *{max-width:50%}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:30px;background:rgba(255,255,255,.08);backdrop-filter:blur(6px);font:500 12px/1 var(--font-ui);letter-spacing:.4px;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.08)}
+  .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--brand-green)}
+  .hero-h{font:600 64px/1.12 var(--font-display);letter-spacing:-2px;color:#fff;max-width:820px;margin:0}
+  .hero-h em{font-style:italic;font-weight:700;color:var(--brand-green-light)}
+  .hero-h .hero-stop{color:var(--brand-green-light)}
+  .hero-sub{font:400 18px/1.45 var(--font-body);color:rgba(255,255,255,.8);max-width:560px;margin:0}
+  .hero-ctas{display:flex;gap:12px;padding-top:8px}
+  .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--brand-green);color:#fff;font:600 17px/1 var(--font-ui);padding:18px 28px;border-radius:4px;transition:transform var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out),background var(--dur) var(--ease-out);position:relative;overflow:hidden}
+  .btn-primary::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.25) 50%,transparent 70%);transform:translateX(-120%);transition:transform .8s var(--ease-out)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(101,179,46,.40);background:var(--brand-green-light)}
+  .btn-primary:hover::after{transform:translateX(120%)}
+  .btn-primary .arrow{transition:transform var(--dur) var(--ease-out)}
+  .btn-primary:hover .arrow{transform:translateX(4px)}
+  .btn-ghost{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);color:#fff;font:500 16px/1 var(--font-ui);padding:18px 28px;border-radius:4px;border:1.5px solid rgba(255,255,255,.28);transition:background var(--dur) var(--ease-out),border-color var(--dur) var(--ease-out),transform var(--dur) var(--ease-out)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.5);transform:translateY(-2px)}
+  .hero-trust{display:flex;align-items:center;gap:24px;padding-top:16px}
+  .av-stack{display:flex}
+  .av{width:38px;height:38px;border-radius:50%;border:2px solid var(--brand-navy-deep);background:#3a4a78 center/cover no-repeat;margin-left:-12px;transition:transform var(--dur) var(--ease-out);display:flex;align-items:center;justify-content:center;font:600 13px/1 var(--font-body);color:#fff;letter-spacing:.5px;text-transform:uppercase}
+  .av:first-child{margin-left:0}
+  .av-stack:hover .av{transform:translateX(3px)}
+  .av-stack:hover .av:nth-child(2){transform:translateX(6px)}
+  .av-stack:hover .av:nth-child(3){transform:translateX(9px)}
+  .av-stack:hover .av:nth-child(4){transform:translateX(12px)}
+  .hero-trust-text .a{font:600 13px/1.3 var(--font-body);color:#fff}
+  .hero-trust-text .b{font:400 13px/1.3 var(--font-body);color:rgba(255,255,255,.55);margin-top:2px}
+
+  /* Stat strip */
+  .stats{background:var(--brand-green);display:grid;grid-template-columns:repeat(4,1fr);height:130px;padding:0 80px;align-items:center;color:#fff}
+  .stat{padding:0 16px;border-right:1px solid rgba(255,255,255,.22);height:60%;display:flex;flex-direction:column;justify-content:center;gap:4px;transition:transform var(--dur) var(--ease-out)}
+  .stat:last-child{border-right:0}
+  .stat:hover{transform:translateY(-2px)}
+  .stat .n{font:800 46px/1 var(--font-display);letter-spacing:-1.5px;color:#fff}
+  .stat .d{font:500 12px/1.2 var(--font-body);color:rgba(255,255,255,.82);max-width:180px}
+
+  /* Section eyebrow */
+  .eyeline{display:inline-flex;align-items:center;gap:14px}
+  .eyeline .n{font:700 14px/1 var(--font-display);letter-spacing:1px;color:var(--brand-green)}
+  .eyeline .r{width:40px;height:1px;background:var(--brand-green-dark)}
+  .eyeline .t{font:600 12px/1 var(--font-ui);letter-spacing:2px;color:var(--brand-green-dark);text-transform:uppercase}
+  .eyeline.invert .t{color:rgba(255,255,255,.7)}
+  .eyeline.invert .r{background:rgba(255,255,255,.7)}
+  .eyeline.green .t{color:var(--brand-green)}
+  .eyeline.green .r{background:var(--brand-green)}
+
+  /* Quiz */
+  .quiz{display:grid;grid-template-columns:1fr 1fr;gap:60px;background:var(--brand-green-mist);height:auto;min-height:540px;padding:64px 80px;align-items:center}
+  .quiz-left h2{font:700 42px/1.05 var(--font-display);letter-spacing:-1px;color:var(--brand-navy-deep);margin:18px 0 18px}
+  .quiz-left p{font:400 15px/1.55 var(--font-body);color:var(--text-body);max-width:480px;margin:0}
+  .quiz-bul{display:flex;flex-direction:column;gap:10px;padding-top:18px;list-style:none;margin:0}
+  .quiz-bul li{display:flex;align-items:center;gap:10px;font:500 14px/1.2 var(--font-body);color:var(--text-body)}
+  .quiz-bul li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--brand-green-dark)}
+  .quiz-card{background:#fff;border-radius:12px;padding:32px;box-shadow:0 24px 60px rgba(14,29,62,.14);display:flex;flex-direction:column;gap:24px}
+  .quiz-head{display:flex;justify-content:space-between;align-items:center}
+  .quiz-q-num{font:600 12px/1 var(--font-body);letter-spacing:1.2px;color:var(--text-muted);text-transform:uppercase}
+  .quiz-dots{display:flex;gap:6px}
+  .quiz-dot{width:8px;height:8px;border-radius:50%;background:#D6DAE2;transition:background var(--dur) var(--ease-out),transform var(--dur) var(--ease-out)}
+  .quiz-dot.on{background:var(--brand-green-dark);transform:scale(1.15)}
+  .quiz-q{font:700 24px/1.2 var(--font-display);letter-spacing:-.5px;color:var(--brand-navy-deep);min-height:60px}
+  .quiz-answers{display:flex;flex-direction:column;gap:10px}
+  .quiz-a{display:flex;align-items:center;gap:12px;padding:12px 18px;border-radius:6px;background:var(--surface-cream);border:1px solid #E2DDD0;font:400 14px/1.2 var(--font-body);color:var(--text-body);cursor:pointer;transition:background var(--dur) var(--ease-out),border-color var(--dur) var(--ease-out),transform var(--dur) var(--ease-out);width:100%;text-align:left}
+  .quiz-a:hover{background:#fff;border-color:var(--brand-green);transform:translateX(4px)}
+  .quiz-a.on{background:var(--brand-green-mist);border-color:var(--brand-green);border-width:2px;padding:11px 17px;color:var(--brand-navy-deep);font-weight:600}
+  .quiz-a .k{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:4px;background:#fff;border:1px solid #C8C0AE;font:600 11px/1 var(--font-ui);color:var(--text-muted);flex:0 0 24px;transition:all var(--dur) var(--ease-out)}
+  .quiz-a.on .k{background:var(--brand-green);border-color:var(--brand-green);color:#fff}
+  .quiz-foot{display:flex;justify-content:space-between;align-items:center;padding-top:8px}
+  .quiz-back{font:500 14px/1 var(--font-ui);color:var(--text-muted);transition:color var(--dur) var(--ease-out)}
+  .quiz-back:hover{color:var(--brand-navy-deep)}
+  .quiz-next{background:var(--brand-navy-deep);color:#fff;font:600 14px/1 var(--font-ui);padding:14px 22px;border-radius:4px;display:inline-flex;align-items:center;gap:8px;transition:transform var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out)}
+  .quiz-next:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(14,29,62,.30)}
+  .quiz-next .arrow{transition:transform var(--dur) var(--ease-out)}
+  .quiz-next:hover .arrow{transform:translateX(3px)}
+  .quiz-result{background:linear-gradient(135deg,var(--brand-navy-deep) 0%,var(--brand-navy) 100%);color:#fff;border-radius:8px;padding:22px;display:none}
+  .quiz-result.on{display:block}
+  .quiz-result h3{font:700 22px/1.2 var(--font-display);margin:0 0 8px}
+  .quiz-result p{font:400 14px/1.5 var(--font-body);color:rgba(255,255,255,.85);margin:0 0 16px}
+  .quiz-result a{display:inline-flex;align-items:center;gap:8px;background:var(--brand-green);color:#fff;font:600 14px/1 var(--font-ui);padding:12px 20px;border-radius:4px;transition:transform var(--dur) var(--ease-out)}
+  .quiz-result a:hover{transform:translateX(3px)}
+
+  /* What it is */
+  .what{display:grid;grid-template-columns:40% 60%;background:#fff;align-items:stretch}
+  .what-l{background:url('images/emsella2.jpg') center/cover no-repeat;padding:32px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;min-height:640px}
+  .what-l::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(14,29,62,.18) 100%);pointer-events:none}
+  .what-caption{position:relative;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:6px;padding:16px 20px;display:flex;flex-direction:column;gap:6px;z-index:1}
+  .what-caption .e{font:600 10px/1 var(--font-ui);letter-spacing:1.8px;color:var(--brand-green-dark);text-transform:uppercase}
+  .what-caption .t{font:600 14px/1.4 var(--font-body);color:var(--brand-navy-deep)}
+  .what-r{padding:64px 64px 64px 56px;display:flex;flex-direction:column;justify-content:center;gap:24px;min-width:0}
+  .what-l{min-width:0}
+  .what-h{font:700 46px/1 var(--font-display);letter-spacing:-1.5px;color:var(--brand-navy-deep);margin:0}
+  .what-p{font:400 16px/1.6 var(--font-body);color:var(--text-body);margin:0}
+  .what-pts{display:flex;flex-direction:column}
+  .what-pt{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:18px 0;border-top:1px solid #EDEFF3;transition:padding var(--dur) var(--ease-out)}
+  .what-pt:last-child{border-bottom:1px solid #EDEFF3}
+  .what-pt:hover{padding-left:6px}
+  .what-pt .k{font:700 32px/1 var(--font-display);letter-spacing:-1px;color:var(--brand-green)}
+  .what-pt .v{font:400 14px/1.55 var(--font-body);color:var(--text-body)}
+
+  /* Who it's for */
+  .who{display:grid;grid-template-columns:560px 1fr;gap:48px;background:var(--brand-navy-deep);color:#fff;padding:64px 80px;align-items:start}
+  .who-l h2{font:700 40px/1.05 var(--font-display);letter-spacing:-1px;color:#fff;margin:18px 0 14px}
+  .who-l p{font:400 16px/1.5 var(--font-body);color:rgba(255,255,255,.72);margin:0 0 20px}
+  .who-img{border-radius:10px;background:url('images/emsella10.jpg') center/cover no-repeat;height:300px;width:100%;transition:transform var(--dur-slow) var(--ease-out)}
+  .who-img:hover{transform:scale(1.02)}
+  .who-r{display:flex;flex-direction:column;gap:10px}
+  .who-card{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:16px 20px;border:1px solid rgba(255,255,255,.18);border-radius:8px;background:transparent;cursor:pointer;transition:background var(--dur) var(--ease-out),border-color var(--dur) var(--ease-out),transform var(--dur) var(--ease-out)}
+  .who-card.on,.who-card:hover{background:rgba(255,255,255,.06);border-color:var(--brand-green);border-width:1.5px;padding:15.5px 19.5px;transform:translateY(-2px)}
+  .who-card .n{font:700 18px/1 var(--font-display);letter-spacing:-.5px;color:rgba(255,255,255,.5);min-width:28px;transition:color var(--dur) var(--ease-out)}
+  .who-card.on .n,.who-card:hover .n{color:var(--brand-green)}
+  .who-card .b h4{font:700 16px/1.2 var(--font-body);color:#fff;margin:0 0 2px}
+  .who-card .b p{font:400 13px/1.4 var(--font-body);color:rgba(255,255,255,.7);margin:0}
+  .who-card .chev{color:rgba(255,255,255,.4);font-size:18px;transition:transform var(--dur) var(--ease-out)}
+  .who-card:hover .chev{transform:translateX(4px);color:var(--brand-green)}
+
+  /* Session */
+  .session{display:grid;grid-template-columns:580px 1fr;gap:48px;background:var(--brand-green-mist);padding:80px;align-items:center}
+  .session-l{display:flex;flex-direction:column;gap:0}
+  .session-l h2{font:700 38px/1.05 var(--font-display);letter-spacing:-1px;color:var(--brand-navy-deep);margin:18px 0 14px}
+  .session-l p{font:400 16px/1.5 var(--font-body);color:var(--text-muted);margin:0 0 18px}
+  .session-img{border-radius:10px;background:var(--brand-green-mist) url('images/doctor4.jpg') center/contain no-repeat;height:380px;width:100%;position:relative;overflow:hidden}
+  .session-r{display:flex;flex-direction:column;justify-content:center}
+  .step{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid #EDEFF3;align-items:center;transition:padding var(--dur) var(--ease-out)}
+  .step:last-child{border-bottom:0}
+  .step:hover{padding-left:6px}
+  .step-n{width:64px;height:64px;border-radius:32px;background:var(--brand-green-mist);border:1px solid var(--brand-green-light);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;transition:background var(--dur) var(--ease-out),transform var(--dur) var(--ease-out)}
+  .step:hover .step-n{background:var(--brand-green);transform:rotate(-4deg) scale(1.05)}
+  .step-n .a{font:700 22px/1 var(--font-display);color:var(--brand-green-dark);transition:color var(--dur) var(--ease-out)}
+  .step-n .b{font:400 10px/1.2 var(--font-body);letter-spacing:.5px;color:var(--brand-green-dark);text-transform:uppercase;transition:color var(--dur) var(--ease-out)}
+  .step:hover .step-n .a,.step:hover .step-n .b{color:#fff}
+  .step-b h3{font:700 17px/1.2 var(--font-body);color:var(--brand-navy-deep);margin:0 0 4px}
+  .step-b p{font:400 14px/1.5 var(--font-body);color:var(--text-muted);margin:0}
+
+  /* Proof */
+  .proof{position:relative;height:520px;background:var(--brand-navy-deep) center/cover no-repeat;overflow:hidden;color:#fff}
+  .proof-bg{position:absolute;inset:0;background:url('images/emsella9.jpg') center/cover no-repeat;opacity:.9;transform:scale(1.04);transition:transform 8s linear}
+  .proof-over{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,29,62,0) 0%,rgba(16,29,62,.35) 55%,var(--brand-navy-deep) 100%)}
+  .proof-grid{position:relative;display:grid;grid-template-columns:480px 1fr;gap:80px;max-width:var(--max);margin:0 auto;padding:80px;height:520px;align-items:center}
+  .proof-l h2{font:700 42px/1 var(--font-display);letter-spacing:-1.5px;color:#fff;margin:18px 0 14px}
+  .proof-l p{font:400 14px/1.55 var(--font-body);color:rgba(255,255,255,.82);margin:0}
+  .proof-r{display:flex;flex-direction:column}
+  .proof-row{display:grid;grid-template-columns:240px 1fr;gap:24px;padding:24px 0;border-top:1px solid rgba(255,255,255,.18);align-items:center;transition:padding var(--dur) var(--ease-out)}
+  .proof-row:last-child{border-bottom:1px solid rgba(255,255,255,.18)}
+  .proof-row:hover{padding-left:6px}
+  .proof-row .n{font:800 80px/1 var(--font-display);letter-spacing:-3px;color:var(--brand-green);transition:transform var(--dur) var(--ease-out)}
+  .proof-row:hover .n{transform:translateY(-2px)}
+  .proof-row .b h4{font:700 16px/1.2 var(--font-body);color:#fff;margin:0 0 6px}
+  .proof-row .b p{font:400 13px/1.5 var(--font-body);color:rgba(255,255,255,.72);margin:0}
+
+  /* Video testimonial */
+  .vid{background:var(--brand-navy-deep);color:#fff;padding:72px 80px;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center}
+  .vid h2{font:700 38px/1.1 var(--font-display);letter-spacing:-1px;color:#fff;margin:0;max-width:760px}
+  .vid p{font:400 15px/1.55 var(--font-body);color:rgba(255,255,255,.72);margin:0;max-width:600px}
+  .vid-frame{position:relative;width:100%;max-width:880px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.45);background:#000}
+  .vid-frame iframe,.vid-frame video{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;object-fit:cover;background:#000}
+
+  /* Reviews */
+  .rev{background:var(--brand-green-mist);padding:64px 80px;display:flex;flex-direction:column;gap:32px}
+  .rev-head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px}
+  .rev-hl h2{font:700 42px/1 var(--font-display);letter-spacing:-1.5px;color:var(--brand-navy-deep);margin:14px 0 0}
+  .rev-hr{display:flex;flex-direction:column;align-items:flex-end;padding-bottom:8px;gap:4px}
+  .rev-hr .a{font:800 64px/1 var(--font-display);letter-spacing:-2px;color:var(--brand-green)}
+  .rev-hr .b{font:600 13px/1 var(--font-body);color:var(--text-muted)}
+  .rev-body{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;height:auto;min-height:320px}
+  .rev-card{border-radius:8px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;transition:transform var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out);-webkit-tap-highlight-color:transparent;user-select:none}
+  .rev-card:focus,.rev-card:active{outline:none;background-color:inherit}
+  .rev-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift)}
+  .rev-card.a{background:var(--surface-bg);color:var(--brand-navy-deep)}
+  .rev-card.b{background:var(--brand-green);color:#fff}
+  .rev-card.c{background:var(--brand-navy-deep);color:#fff}
+  .rev-tag{display:inline-flex;align-self:flex-start;align-items:center;padding:4px 10px;border-radius:30px;font:700 10px/1 var(--font-ui);letter-spacing:1.5px;text-transform:uppercase}
+  .rev-card.a .rev-tag{background:var(--brand-green-mist);color:var(--brand-green-dark)}
+  .rev-card.b .rev-tag{background:rgba(255,255,255,.18);color:#fff}
+  .rev-card.c .rev-tag{background:var(--brand-green);color:#fff}
+  .rev-q{font:italic 500 18px/1.4 var(--font-display);margin:0;flex:1}
+  .rev-card.a .rev-q{color:var(--brand-navy-deep)}
+  .rev-by{display:flex;align-items:center;gap:12px}
+  .rev-av{width:42px;height:42px;border-radius:50%;background:#cdd5e0 center/cover no-repeat;flex:0 0 42px;display:flex;align-items:center;justify-content:center;font:600 16px/1 var(--font-body);color:#fff;letter-spacing:.5px;text-transform:uppercase}
+  .rev-nm .a{font:700 14px/1.2 var(--font-body)}
+  .rev-nm .b{font:400 11px/1.3 var(--font-body);margin-top:2px;opacity:.78}
+
+  /* Comparison */
+  .comp{background:var(--surface-bg);padding:64px 80px;display:flex;flex-direction:column;gap:32px}
+  .comp-head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px}
+  .comp-hl h2{font:700 42px/1 var(--font-display);letter-spacing:-1.5px;color:var(--brand-navy-deep);margin:14px 0 0}
+  .comp-hr{font:italic 400 14px/1.5 var(--font-body);color:var(--text-muted);text-align:right;max-width:340px}
+  .tbl{border-radius:8px;overflow:hidden;background:#fff;border:1px solid #E2E5EA}
+  .tbl-head{display:grid;grid-template-columns:300px repeat(4,1fr);background:var(--brand-navy-deep);color:#fff;height:60px;align-items:center}
+  .tbl-head>div{padding:0 16px;font:700 11px/1 var(--font-ui);letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.65)}
+  .tbl-head>div:first-child{padding:0 24px;color:rgba(255,255,255,.65)}
+  .tbl-head .em{position:relative;color:#fff}
+  .tbl-head .em::before{content:"";position:absolute;inset:8px 8px;background:var(--brand-green);border-radius:8px;z-index:0}
+  .tbl-head .em span{position:relative;z-index:1;color:#fff}
+  .tbl-row{display:grid;grid-template-columns:300px repeat(4,1fr);height:74px;align-items:center;border-bottom:1px solid #EDEFF3;transition:background var(--dur) var(--ease-out)}
+  .tbl-row:last-child{border-bottom:0}
+  .tbl-row:hover{background:#FAFBFC}
+  .tbl-row>div{padding:0 16px;font:400 14px/1.4 var(--font-body);color:var(--text-body)}
+  .tbl-row>div:first-child{padding:0 24px;font-weight:700;color:var(--brand-navy-deep);font-size:15px}
+  .tbl-row .em{margin:0 8px;background:var(--brand-green-mist);border-radius:8px;height:44px;display:flex;align-items:center;font-weight:700;color:var(--brand-green-dark)}
+
+  /* Pricing */
+  .price{background:var(--brand-green-mist);padding:56px 40px;display:flex;flex-direction:column;gap:28px}
+  .price-head{display:flex;justify-content:space-between;align-items:flex-end;padding:0 40px}
+  .price-hl h2{font:700 42px/1.05 var(--font-display);letter-spacing:-1.5px;color:var(--brand-navy-deep);margin:10px 0 0}
+  .price-hr{display:flex;gap:8px;padding-bottom:10px}
+  .chip{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:6px 14px;border-radius:18px;font:600 12px/1 var(--font-body);color:var(--brand-navy-deep)}
+  .chip .d{width:6px;height:6px;border-radius:50%;background:var(--brand-green)}
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:0 40px}
+  .pcard{background:#fff;border-radius:32px;padding:28px;display:flex;flex-direction:column;gap:14px;transition:transform var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out);position:relative;min-height:332px}
+  .pcard:hover{transform:translateY(-6px);box-shadow:var(--shadow-lift)}
+  .pcard.b{background:var(--brand-navy-deep);color:#fff}
+  .pcard-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--brand-green);color:#fff;padding:4px 12px;border-radius:30px;font:700 10px/1 var(--font-ui);letter-spacing:1px;white-space:nowrap}
+  .pcard .n{font:600 11px/1 var(--font-ui);letter-spacing:1.5px;color:var(--text-muted);text-transform:uppercase;padding-top:6px}
+  .pcard.b .n{color:rgba(255,255,255,.7);padding-top:6px}
+  .pcard .p{display:flex;align-items:flex-end;gap:6px}
+  .pcard .p .a{font:800 64px/.95 var(--font-display);letter-spacing:-2px;color:var(--brand-navy-deep)}
+  .pcard.b .p .a{color:#fff}
+  .pcard .p .b{font:500 13px/1.4 var(--font-body);color:var(--brand-green-dark);padding-bottom:8px}
+  .pcard.b .p .b{color:rgba(255,255,255,.7)}
+  .pcard .d{font:400 13px/1.55 var(--font-body);color:var(--text-body);flex:1}
+  .pcard.b .d{color:rgba(255,255,255,.82)}
+  .pcard-cta{display:flex;align-items:center;justify-content:center;height:46px;border-radius:23px;background:var(--surface-bg);color:var(--brand-navy-deep);font:600 14px/1 var(--font-ui);transition:background var(--dur) var(--ease-out),transform var(--dur) var(--ease-out)}
+  .pcard-cta:hover{background:var(--brand-green);color:#fff;transform:translateY(-2px)}
+  .pcard.b .pcard-cta{background:var(--brand-green);color:#fff}
+  .pcard.b .pcard-cta:hover{background:var(--brand-green-light)}
+
+  /* Doctor */
+  .doc{display:grid;grid-template-columns:1fr 460px;gap:48px;background:#fff;padding:64px 80px 64px 140px;align-items:center}
+  .doc-l h2{font:700 48px/1 var(--font-display);letter-spacing:-1.5px;color:var(--brand-navy-deep);margin:18px 0 6px}
+  .doc-role{font:600 15px/1.4 var(--font-body);color:var(--text-muted);margin:0 0 16px}
+  .doc-q{font:italic 500 20px/1.4 var(--font-display);color:var(--text-body);margin:0 0 18px;max-width:640px}
+  .doc-bio{font:400 15px/1.6 var(--font-body);color:var(--text-body);margin:0 0 14px;max-width:640px}
+  .doc-chips{display:flex;flex-wrap:wrap;gap:8px;padding:10px 0 0}
+  .doc-chip{display:inline-flex;align-items:center;background:var(--brand-green-mist);color:var(--brand-green-dark);font:600 12px/1 var(--font-body);padding:9px 14px;border-radius:18px;transition:background var(--dur) var(--ease-out),transform var(--dur) var(--ease-out)}
+  .doc-chip:hover{background:var(--brand-green);color:#fff;transform:translateY(-2px)}
+  .doc-ctas{display:flex;align-items:center;gap:20px;padding:14px 0 0;flex-wrap:wrap}
+  .doc-badge{display:block;height:120px;width:auto;transition:transform var(--dur) var(--ease-out)}
+  .doc-badge:hover{transform:translateY(-2px) rotate(-2deg)}
+  .doc-cta{display:inline-flex;align-items:center;height:48px;padding:0 22px;border-radius:24px;font:500 14px/1 var(--font-ui);transition:transform var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out)}
+  .doc-cta.p{background:var(--brand-navy-deep);color:#fff}
+  .doc-cta.p:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(14,29,62,.3)}
+  .doc-cta.s{background:var(--brand-green-mist);color:var(--brand-green-dark)}
+  .doc-cta.s:hover{background:var(--brand-green);color:#fff;transform:translateY(-2px)}
+  .doc-r{height:432px}
+  .doc-img{height:100%;border-radius:32px;background:url('images/doctor.jpg') center/cover no-repeat;transition:transform var(--dur-slow) var(--ease-out)}
+  .doc-img:hover{transform:scale(1.02)}
+
+  /* Contact */
+  .cnt{display:grid;grid-template-columns:1fr 1fr;gap:24px;background:var(--brand-green-mist);padding:64px 40px}
+  .cnt-l{background:#fff;border-radius:32px;padding:32px;display:flex;flex-direction:column;gap:18px}
+  .cnt-l h2{font:700 34px/1.05 var(--font-display);letter-spacing:-1px;color:var(--brand-navy-deep);margin:14px 0 0}
+  .cnt-form{display:flex;flex-direction:column;gap:14px}
+  .cnt-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .field label{display:block;font:600 12px/1 var(--font-body);color:var(--text-body);margin-bottom:5px}
+  .field input,.field textarea{width:100%;background:var(--surface-bg);border:1px solid transparent;border-radius:23px;padding:14px 18px;font:400 14px/1.2 var(--font-body);color:var(--brand-navy-deep);outline:0;transition:border-color var(--dur) var(--ease-out),background var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out)}
+  .field textarea{min-height:84px;resize:vertical;border-radius:16px}
+  .field input:focus,.field textarea:focus{border-color:var(--brand-green);background:#fff;box-shadow:0 0 0 4px rgba(101,179,46,.15)}
+  .field input::placeholder,.field textarea::placeholder{color:var(--text-soft)}
+  .cnt-btn{display:flex;align-items:center;justify-content:center;height:52px;border-radius:26px;background:var(--brand-navy-deep);color:#fff;font:500 15px/1 var(--font-ui);transition:transform var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out)}
+  .cnt-btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(14,29,62,.3)}
+  .cnt-r{display:flex;flex-direction:column;gap:14px}
+  .cnt-map{height:240px;border-radius:32px;overflow:hidden;background:var(--surface-bg);transition:transform var(--dur-slow) var(--ease-out)}
+  .cnt-map iframe{display:block;width:100%;height:100%;border:0}
+  .cnt-map:hover{transform:scale(1.01)}
+  .cnt-info{background:#fff;border-radius:32px;flex:1;display:grid;grid-template-columns:1fr 1fr;gap:0;overflow:hidden;min-height:340px}
+  .cnt-info-l{padding:28px;display:flex;flex-direction:column;gap:10px}
+  .cnt-info-r{background:url('images/outside.jpg') center/cover no-repeat;min-height:100%;transition:transform var(--dur-slow) var(--ease-out)}
+  .cnt-info-r:hover{transform:scale(1.02)}
+  .cnt-info h3{font:700 20px/1.2 var(--font-display);color:var(--brand-navy-deep);margin:0 0 4px}
+  .cnt-info .cnt-line{font:400 14px/1.5 var(--font-body);color:var(--text-body);margin:0;display:block}
+  .cnt-info a.cnt-line{color:var(--brand-navy-deep);font-weight:600;transition:color var(--dur) var(--ease-out)}
+  .cnt-info a.cnt-line:hover{color:var(--brand-green-dark)}
+  .cnt-hours{display:flex;flex-direction:column;gap:6px;padding-top:14px;margin-top:6px;border-top:1px solid #EDEFF3}
+  .cnt-hours div{display:flex;justify-content:flex-start;align-items:baseline;gap:10px}
+  .cnt-hours .a{font:600 13px/1.3 var(--font-body);color:var(--text-muted);min-width:88px}
+  .cnt-hours .b{font:700 13px/1.3 var(--font-body);color:var(--brand-navy-deep)}
+  .cnt-hours .closed .b{color:var(--text-muted);font-weight:500}
+
+  /* FAQ */
+  .faq{background:#fff;padding:72px 80px;display:flex;flex-direction:column;gap:36px}
+  .faq-head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px}
+  .faq-hl h2{font:700 36px/1.05 var(--font-display);letter-spacing:-1px;color:var(--brand-navy-deep);margin:8px 0 0}
+  .faq-hr{font:400 14px/1.4 var(--font-body);color:var(--text-muted);padding-bottom:4px}
+  .faq-hr a{color:var(--brand-green-dark);font-weight:600;margin-left:8px}
+  .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .faq-col{display:flex;flex-direction:column;gap:12px}
+  .faq-item{background:var(--surface-bg);border-radius:8px;overflow:hidden;transition:background var(--dur) var(--ease-out)}
+  .faq-item.open{background:var(--brand-green-mist)}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 22px;cursor:pointer;font:700 16px/1.2 var(--font-body);color:var(--brand-navy-deep);user-select:none}
+  .faq-q .ic{font:600 22px/1 var(--font-display);color:var(--text-muted);transition:color var(--dur) var(--ease-out),transform var(--dur) var(--ease-out)}
+  .faq-item.open .faq-q .ic{color:var(--brand-green-dark);transform:rotate(180deg)}
+  .faq-a{max-height:0;overflow:hidden;padding:0 22px;transition:max-height var(--dur-slow) var(--ease-out),padding var(--dur) var(--ease-out)}
+  .faq-item.open .faq-a{max-height:400px;padding:0 22px 20px}
+  .faq-a p{font:400 14px/1.55 var(--font-body);color:var(--text-body);margin:0}
+
+  /* Footer */
+  .foot{background:var(--brand-navy-deep);color:#fff;padding:44px 80px 32px;display:flex;flex-direction:column;gap:32px}
+  .foot-top{display:flex;justify-content:flex-start;align-items:flex-start;gap:56px;flex-wrap:wrap}
+  .foot-l{display:flex;flex-direction:column;gap:16px;max-width:320px}
+  .foot-logo{width:160px;height:46px;display:block}
+  .foot-logo img{width:100%;height:100%;object-fit:contain}
+  .foot-l p{font:400 13px/1.65 var(--font-body);color:rgba(255,255,255,.7);margin:0;white-space:pre-line}
+  .foot-social{display:flex;gap:10px;margin-top:6px}
+  .foot-social a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);color:rgba(255,255,255,.85);transition:background var(--dur) var(--ease-out),color var(--dur) var(--ease-out),transform var(--dur) var(--ease-out)}
+  .foot-social a:hover{background:var(--brand-green);color:#fff;transform:translateY(-2px)}
+  .foot-social svg{width:18px;height:18px;display:block}
+  .foot-col h4{font:600 10px/1 var(--font-ui);letter-spacing:1.5px;color:var(--brand-green);text-transform:uppercase;margin:0 0 8px}
+  .foot-col p,.foot-col a{font:400 13px/1.7 var(--font-body);color:#fff;white-space:pre-line;margin:0;display:block;transition:color var(--dur) var(--ease-out)}
+  .foot-col a:hover{color:var(--brand-green)}
+  .foot-bot{display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid rgba(255,255,255,.10)}
+  .foot-cop{font:400 12px/1 var(--font-body);color:rgba(255,255,255,.5)}
+  .foot-leg{display:flex;gap:24px}
+  .foot-leg a{font:400 12px/1 var(--font-body);color:rgba(255,255,255,.5);transition:color var(--dur) var(--ease-out)}
+  .foot-leg a:hover{color:#fff}
+
+  /* Float CTA */
+  .float-cta{position:fixed;bottom:24px;right:24px;background:var(--brand-green);color:#fff;font:600 14px/1 var(--font-ui);padding:14px 22px;border-radius:30px;box-shadow:0 12px 28px rgba(101,179,46,.4);z-index:50;display:none;align-items:center;gap:8px;transition:transform var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out);transform:translateY(120%);opacity:0}
+  .float-cta.show{display:inline-flex;transform:translateY(0);opacity:1}
+  .float-cta:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(101,179,46,.55)}
+
+  @media (max-width:1100px){
+    .header-row,.section,.hero-inner,.who,.session,.proof-grid,.rev,.comp,.price,.doc,.cnt,.faq,.foot,.vid{padding-left:40px;padding-right:40px}
+    .hero-h{font-size:48px}
+    .hero-inner > *{max-width:60%}
+  }
+  @media (max-width:760px){
+    /* Header — compact for narrow screens */
+    .h-nav{display:none}
+    .header-row{height:64px;padding:10px 20px;gap:12px}
+    .h-left{gap:0}
+    .h-logo{width:120px;height:34px}
+    .h-right{gap:10px}
+    .h-phone span:not(.h-phone-dot){display:none}
+    .h-phone{padding:0;border-radius:50%;background:rgba(255,255,255,.08);width:38px;height:38px;min-width:38px;display:inline-flex;justify-content:center;align-items:center}
+    .h-cta{display:inline-flex;align-items:center;justify-content:center;padding:0 16px;height:40px;min-height:40px;font-size:13px;line-height:1}
+
+    /* Hero — keep image as true background with stronger overlay */
+    .hero{height:auto;min-height:620px;display:flex;flex-direction:column}
+    .hero-bg{display:block;position:absolute;inset:0;background-position:center right;background-size:cover}
+    .hero-fade{display:block;position:absolute;inset:0;width:100%;background:linear-gradient(180deg,rgba(16,29,62,.78) 0%,rgba(16,29,62,.55) 35%,rgba(16,29,62,.85) 75%,var(--brand-navy-deep) 100%)}
+    .hero-fade::after{display:none}
+    .hero-inner{height:auto;min-height:620px;padding:32px 20px 48px;gap:18px;justify-content:flex-end}
+    .hero-inner > *{max-width:100%}
+    .eyebrow{font-size:11px;padding:6px 10px;line-height:1.3;text-align:left;align-self:flex-start;max-width:100%;white-space:normal}
+    .hero-h{font-size:34px;letter-spacing:-1px;line-height:1.1}
+    .hero-sub{font-size:15px;line-height:1.5}
+    .hero-ctas{padding-top:4px;width:100%}
+    .hero-ctas .btn-primary{width:100%;justify-content:center;padding:16px 24px;font-size:16px}
+    .hero-trust{flex-wrap:wrap;gap:14px;padding-top:8px}
+    .av{width:32px;height:32px}
+    .hero-trust-text .a,.hero-trust-text .b{font-size:12px}
+
+    /* Stats */
+    .stats{grid-template-columns:repeat(2,1fr);height:auto;padding:20px;gap:16px 0}
+    .stat{height:auto;padding:6px 8px;border-right:1px solid rgba(255,255,255,.22)}
+    .stat:nth-child(2n){border-right:0}
+    .stat:last-child{border-right:0}
+    .stat .n{font-size:34px;letter-spacing:-1px}
+    .stat .d{font-size:11px}
+
+    /* Generic stacking */
+    .quiz,.what,.who,.session,.proof-grid,.rev-head,.rev-body,.comp-head,.price-head,.price-grid,.doc,.cnt,.faq-head,.faq-grid,.foot-top{grid-template-columns:1fr;display:flex;flex-direction:column;height:auto;min-height:0;gap:24px}
+
+    /* Section paddings overall */
+    .quiz,.who,.session,.rev,.comp,.price,.doc,.cnt,.faq,.vid,.foot{padding-left:20px;padding-right:20px}
+    .quiz{padding-top:48px;padding-bottom:48px}
+    .who{padding-top:48px;padding-bottom:48px}
+    .session{padding-top:48px;padding-bottom:48px}
+    .rev{padding-top:48px;padding-bottom:48px;gap:24px}
+    .comp{padding-top:48px;padding-bottom:48px;gap:24px}
+    .price{padding-top:48px;padding-bottom:48px}
+    .doc{padding:48px 20px}
+    .cnt{padding-top:40px;padding-bottom:40px}
+    .faq{padding-top:48px;padding-bottom:48px;gap:24px}
+    .vid{padding-top:48px;padding-bottom:48px;gap:18px}
+    .foot{padding:36px 20px 28px}
+
+    /* Quiz card */
+    .quiz-card{padding:24px}
+    .quiz-left h2{font-size:28px;line-height:1.1;margin:14px 0}
+    .quiz-q{font-size:20px;min-height:auto}
+    .quiz-a{padding:14px 16px;font-size:14px}
+    .quiz-a.on{padding:13px 15px}
+    .quiz-next{padding:14px 18px}
+
+    /* What it is */
+    .what{display:flex;flex-direction:column}
+    .what-l{height:240px;min-height:240px;padding:20px}
+    .what-r{padding:36px 20px}
+    .what-h{font-size:28px;letter-spacing:-1px}
+    .what-pt{grid-template-columns:80px 1fr;gap:16px;padding:14px 0}
+    .what-pt .k{font-size:24px}
+
+    /* Who */
+    .who-l h2{font-size:28px}
+    .who-img{height:220px}
+    .who-card{grid-template-columns:auto 1fr auto;padding:14px 16px;gap:12px}
+    .who-card.on{padding:13.5px 15.5px}
+    .who-card .b h4{font-size:15px}
+    .who-card .b p{font-size:12.5px}
+
+    /* Session */
+    .session-l h2{font-size:28px}
+    .session-img{height:260px}
+    .step{grid-template-columns:52px 1fr;gap:14px;padding:16px 0}
+    .step-n{width:52px;height:52px;border-radius:26px}
+    .step-n .a{font-size:18px}
+    .step-n .b{font-size:9px}
+    .step-b h3{font-size:15px}
+    .step-b p{font-size:13px}
+
+    /* Proof */
+    .proof{height:auto}
+    .proof-grid{padding:48px 20px;height:auto;gap:24px}
+    .proof-l h2{font-size:28px}
+    .proof-row{grid-template-columns:96px 1fr;gap:16px;padding:18px 0;align-items:center}
+    .proof-row .n{font-size:48px;letter-spacing:-2px}
+    .proof-row .b h4{font-size:14px}
+    .proof-row .b p{font-size:12.5px}
+
+    /* Video testimonial */
+    .vid h2{font-size:26px;line-height:1.15}
+    .vid p{font-size:14px}
+    .vid-frame{border-radius:10px}
+
+    /* Reviews */
+    .rev-head{align-items:flex-start}
+    .rev-hl h2{font-size:28px}
+    .rev-hr{align-items:flex-start;padding-bottom:0}
+    .rev-hr .a{font-size:44px}
+    .rev-card{padding:22px}
+    .rev-q{font-size:16px}
+
+    /* Comparison — horizontal scroll */
+    .comp-head{align-items:flex-start}
+    .comp-hl h2{font-size:28px}
+    .comp-hr{text-align:left;max-width:100%}
+    .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:8px}
+    .tbl-head,.tbl-row{grid-template-columns:140px repeat(4,minmax(110px,1fr));font-size:12px;min-width:580px}
+    .tbl-head{height:52px}
+    .tbl-row{height:64px}
+    .tbl-row>div:first-child{padding:0 14px;font-size:13px}
+    .tbl-row>div{padding:0 10px}
+    .tbl-head>div{padding:0 10px}
+    .tbl-head>div:first-child{padding:0 14px}
+
+    /* Pricing */
+    .price-head{padding:0;align-items:flex-start}
+    .price-hl h2{font-size:28px}
+    .price-hr{padding-bottom:0;flex-wrap:wrap}
+    .price-grid{padding:0;gap:18px}
+    .pcard{padding:24px;min-height:auto;border-radius:24px}
+    .pcard .p .a{font-size:48px}
+    .pcard-badge{font-size:9.5px;padding:4px 10px}
+
+    /* Doctor */
+    .doc-l h2{font-size:32px}
+    .doc-q{font-size:17px}
+    .doc-bio{font-size:14.5px}
+    .doc-r{height:auto;width:100%;opacity:1;transform:none}
+    .doc-img{display:block;width:100%;height:360px;border-radius:24px;background:url('images/doctor.jpg') center 20%/cover no-repeat,#e5e9f2}
+    .doc-chip{font-size:11.5px;padding:8px 12px}
+    .doc-ctas{gap:14px;flex-wrap:wrap}
+    .doc-cta{height:46px;padding:0 18px;font-size:13.5px;display:inline-flex}
+    .doc-badge{height:88px}
+
+    /* Contact */
+    .cnt-l{padding:24px;border-radius:24px}
+    .cnt-l h2{font-size:26px}
+    .cnt-row{grid-template-columns:1fr;gap:14px}
+    .field input,.field textarea{padding:13px 16px;border-radius:18px;font-size:15px}
+    .field textarea{border-radius:14px}
+    .cnt-btn{height:50px;border-radius:25px}
+    .cnt-map{height:220px;border-radius:24px}
+    .cnt-info{grid-template-columns:1fr;border-radius:24px;min-height:0}
+    .cnt-info-l{padding:24px}
+    .cnt-info-r{min-height:200px;height:200px}
+    .cnt-info h3{font-size:18px}
+
+    /* FAQ */
+    .faq-head{align-items:flex-start}
+    .faq-hl h2{font-size:26px}
+    .faq-hr{padding-bottom:0}
+    .faq-q{padding:18px;font-size:15px}
+    .faq-a{padding:0 18px}
+    .faq-item.open .faq-a{padding:0 18px 18px}
+    .faq-a p{font-size:13.5px}
+
+    /* Footer */
+    .foot-top{gap:32px}
+    .foot-l{max-width:100%}
+    .foot-bot{flex-direction:column;align-items:flex-start;gap:14px}
+    .foot-leg{flex-wrap:wrap;gap:18px}
+
+    /* Float CTA — show on mobile after hero */
+    .float-cta{display:none;bottom:16px;right:16px;left:16px;justify-content:center;padding:14px 18px;font-size:14px}
+    .float-cta.show{display:inline-flex}
+
+    /* Touch targets */
+    .btn-primary,.btn-ghost,.cnt-btn,.pcard-cta{min-height:46px}
+  }
+  /* Disable sticky :hover on touch devices */
+  @media (hover:none){
+    html{-webkit-tap-highlight-color:transparent}
+    .rev-card,.pcard,.who-card,.tbl-row,.faq-q,.quiz-a,.step,.what-pt,.proof-row,.doc-chip,.doc-cta,.btn-primary,.btn-ghost,.cnt-btn,.pcard-cta,.h-cta,.h-phone,.quiz-next,.float-cta,.doc-img,.cnt-map,.cnt-info-r,.who-img,.av-stack,.stat,.foot-social a,.foot-col a,.foot-leg a{-webkit-tap-highlight-color:transparent}
+    .who-card:hover{background:transparent;border-color:rgba(255,255,255,.18);border-width:1px;padding:16px 20px;transform:none}
+    .who-card:hover .chev{transform:none;color:rgba(255,255,255,.4)}
+    .who-card:hover .n{color:rgba(255,255,255,.5)}
+    .who-card.on{background:rgba(255,255,255,.06);border-color:var(--brand-green);border-width:1.5px;transform:translateY(-2px)}
+    .who-card.on .chev{color:var(--brand-green);transform:translateX(4px)}
+    .who-card.on .n{color:var(--brand-green)}
+    .rev-card:hover{transform:none;box-shadow:var(--shadow-card)}
+    .rev-card.a:hover{background:var(--surface-bg)}
+    .rev-card.b:hover{background:var(--brand-green)}
+    .rev-card.c:hover{background:var(--brand-navy-deep)}
+    .pcard:hover{transform:none;box-shadow:none;background:#fff}
+    .pcard.b:hover{background:var(--brand-navy-deep)}
+    .tbl-row:hover{background:#fff}
+    .step:hover,.what-pt:hover,.proof-row:hover{padding-left:0}
+    .step:hover .step-n{background:var(--brand-green-mist);transform:none}
+    .step:hover .step-n .a,.step:hover .step-n .b{color:var(--brand-green-dark)}
+    .doc-chip:hover,.doc-cta:hover,.btn-primary:hover,.btn-ghost:hover,.cnt-btn:hover,.pcard-cta:hover,.h-cta:hover,.quiz-next:hover,.float-cta:hover{transform:none;box-shadow:none}
+    .doc-img:hover,.cnt-map:hover,.cnt-info-r:hover,.who-img:hover{transform:none}
+    .h-cta:hover{background:var(--brand-green)}
+    .btn-primary:hover{background:var(--brand-green)}
+    .pcard-cta:hover{background:var(--surface-bg);color:var(--brand-navy-deep)}
+    .pcard.b .pcard-cta:hover{background:var(--brand-green);color:#fff}
+    .rev-card:active,.rev-card:focus,.pcard:active,.pcard:focus{background-color:inherit;outline:none}
+    .rev-card.a:active,.rev-card.a:focus{background:var(--surface-bg)}
+    .rev-card.b:active,.rev-card.b:focus{background:var(--brand-green)}
+    .rev-card.c:active,.rev-card.c:focus{background:var(--brand-navy-deep)}
+    .pcard:active,.pcard:focus{background:#fff}
+    .pcard.b:active,.pcard.b:focus{background:var(--brand-navy-deep)}
+  }
+  @media (max-width:380px){
+    .header-row{padding:10px 16px}
+    .h-logo{width:108px;height:30px}
+    .h-cta{padding:10px 14px;font-size:12.5px}
+    .hero-inner{padding:28px 16px 40px}
+    .hero-h{font-size:30px}
+    .hero-sub{font-size:14px}
+    .stat .n{font-size:30px}
+    .quiz,.who,.session,.rev,.comp,.price,.doc,.cnt,.faq,.vid,.foot{padding-left:16px;padding-right:16px}
+    .proof-grid{padding-left:16px;padding-right:16px}
+    .what-r{padding-left:16px;padding-right:16px}
+    .proof-row .n{font-size:42px}
+    .pcard .p .a{font-size:44px}
+    .doc-img{height:300px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition-duration:.01ms!important}
+    .reveal,.reveal-left,.reveal-zoom{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-row">
+    <div class="h-left">
+      <a class="h-logo" href="#" aria-label="Upper Cervical Institute of Florida">
+        <img src="images/logo-white.svg" alt="Upper Cervical Institute of Florida" />
+      </a>
+      <nav class="h-nav" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#results">Results</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+    <div class="h-right">
+      <a class="h-phone" href="tel:+15617944826"><span class="h-phone-dot" aria-hidden="true"></span><span>(561) 794 4826</span></a>
+      <a class="h-cta" href="#contact">Book consultation</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg" style="background-image:url('images/hero2.jpg')"></div>
+  <div class="hero-fade"></div>
+  <div class="hero-inner">
+    <span class="eyebrow reveal" data-stagger="0"><span class="dot"></span>NEW · BTL Emsella® · Boca Raton's only NUCCA supervised provider</span>
+    <h1 class="hero-h reveal" data-stagger="1"><span class="hero-stop">Stop</span> planning your day around the bathroom.</h1>
+    <p class="hero-sub reveal" data-stagger="2">A non-invasive treatment for urinary incontinence. Six 28 minute sessions in the BTL Emsella chair retrain the pelvic floor muscles you cannot reach with Kegels. 11,000 supramaximal contractions per visit. No undressing. No downtime.</p>
+    <div class="hero-ctas reveal" data-stagger="3">
+      <a class="btn-primary" href="#contact"><span>Book consultation</span><span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    <div class="hero-trust reveal" data-stagger="4">
+      <div class="av-stack" aria-hidden="true">
+        <span class="av" style="background-image:url('https://lh3.googleusercontent.com/a-/ALV-UjWJpdLYxbb7YL6v0DaICmIsJgujQkfq7IXId0g-8xRSIxO9tDo=s256-c')" title="Marcos D."></span>
+        <span class="av" style="background:var(--brand-green)">JS</span>
+        <span class="av" style="background-image:url('https://lh3.googleusercontent.com/a-/ALV-UjXC-4HbsBtR81RmBc8UqG5dDb3irjZopnWHpthtNpdR3SqOvHPj=s256-c')" title="Alicia L."></span>
+        <span class="av" style="background:var(--brand-navy)">DK</span>
+      </div>
+      <div class="hero-trust-text">
+        <div class="a">★★★★★&nbsp;&nbsp;5.0 · 85 patient reviews</div>
+        <div class="b">Most patients see results by session 3.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<section class="stats" aria-label="At a glance">
+  <div class="stat reveal" data-stagger="0"><div class="n" data-count="11000">0</div><div class="d">Kegel equivalents per session</div></div>
+  <div class="stat reveal" data-stagger="1"><div class="n">28 min</div><div class="d">Length of one session</div></div>
+  <div class="stat reveal" data-stagger="2"><div class="n">6×</div><div class="d">Sessions over 3 weeks</div></div>
+  <div class="stat reveal" data-stagger="3"><div class="n">0</div><div class="d">Downtime · drive yourself home</div></div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz" id="quiz">
+  <div class="quiz-left">
+    <div class="eyeline reveal"><span class="n">01</span><span class="r"></span><span class="t">60 second quiz</span></div>
+    <h2 class="reveal" data-stagger="1">Will Emsella work for your body? Find out before you book.</h2>
+    <p class="reveal" data-stagger="2">Honestly tell us where you are at and we will honestly tell you if the chair is right for you, or recommend something else. No lead magnet tricks.</p>
+    <ul class="quiz-bul reveal" data-stagger="3">
+      <li>Reveals what may be driving your symptoms</li>
+      <li>Recommends a 6, 8, or 12 session plan (or none)</li>
+      <li>Locks in May's first visit pricing</li>
+    </ul>
+  </div>
+  <div class="quiz-card reveal-zoom" id="quizCard" data-stagger="2">
+    <div class="quiz-head">
+      <span class="quiz-q-num" id="qProgress">Question 1 of 5</span>
+      <div class="quiz-dots" id="qDots" aria-hidden="true"></div>
+    </div>
+    <div class="quiz-q" id="qText"></div>
+    <div class="quiz-answers" id="qAnswers" role="radiogroup" aria-label="Quiz answers"></div>
+    <div class="quiz-result" id="qResult">
+      <h3 id="qrTitle">Your chair fit</h3>
+      <p id="qrBody"></p>
+      <a href="#contact"><span>Book consultation</span><span class="arrow">→</span></a>
+    </div>
+    <div class="quiz-foot">
+      <button class="quiz-back" id="qBack" type="button">← Back</button>
+      <button class="quiz-next" id="qNext" type="button"><span>Continue</span><span class="arrow">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IT IS -->
+<section class="what" id="how">
+  <div class="what-l"></div>
+  <div class="what-r">
+    <div class="eyeline reveal"><span class="n">02</span><span class="r"></span><span class="t">What Emsella is</span></div>
+    <h2 class="what-h reveal" data-stagger="1">A chair that does the work of 11,000 perfect Kegels.</h2>
+    <p class="what-p reveal" data-stagger="2">Emsella is an FDA-cleared treatment for urinary incontinence and pelvic floor weakness. It uses BTL's patented HIFEM® technology, high intensity focused electromagnetic energy, to trigger supramaximal contractions in the pelvic floor. You sit on the chair, fully clothed. The chair fires. Your nervous system never gets to opt out.</p>
+    <div class="what-pts">
+      <div class="what-pt reveal" data-stagger="3"><div class="k">8 cm</div><div class="v">Tissue penetration depth. Reaches the deep stabilizers that voluntary contractions cannot.</div></div>
+      <div class="what-pt reveal" data-stagger="4"><div class="k">11,000</div><div class="v">Contractions per 28 minute session. Years of Kegels condensed into one sit.</div></div>
+      <div class="what-pt reveal" data-stagger="5"><div class="k">FDA</div><div class="v">Cleared for male and female urinary incontinence and pelvic floor rehab.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="who" id="who">
+  <div class="who-l">
+    <div class="eyeline invert green reveal"><span class="n">03</span><span class="r"></span><span class="t">Who it's for</span></div>
+    <h2 class="reveal" data-stagger="1">Six patient types we see most often.</h2>
+    <p class="reveal" data-stagger="2">If one of these sounds like your story, the chair almost certainly fits you.</p>
+    <div class="who-img reveal-zoom" data-stagger="3"></div>
+  </div>
+  <div class="who-r">
+    <div class="who-card reveal" data-stagger="0">
+      <span class="n">01</span>
+      <div class="b"><h4>Postpartum within 5 years</h4><p>Childbirth weakens the pelvic floor. Pads are not the solution. 59% of postpartum women have decreased pelvic floor strength.</p></div>
+      <span class="chev" aria-hidden="true">→</span>
+    </div>
+    <div class="who-card reveal" data-stagger="1">
+      <span class="n">02</span>
+      <div class="b"><h4>Perimenopause and menopause (40 to 65)</h4><p>Estrogen drop accelerates pelvic floor laxity. Emsella reverses some of it.</p></div>
+      <span class="chev" aria-hidden="true">→</span>
+    </div>
+    <div class="who-card reveal" data-stagger="2">
+      <span class="n">03</span>
+      <div class="b"><h4>Athletes and high impact lifters</h4><p>About 44% of athletes report pelvic floor weakness. Stop scaling weights down.</p></div>
+      <span class="chev" aria-hidden="true">→</span>
+    </div>
+    <div class="who-card reveal" data-stagger="3">
+      <span class="n">04</span>
+      <div class="b"><h4>Men post prostatectomy</h4><p>Restoring continence and confidence after pelvic surgery.</p></div>
+      <span class="chev" aria-hidden="true">→</span>
+    </div>
+    <div class="who-card reveal" data-stagger="4">
+      <span class="n">05</span>
+      <div class="b"><h4>Anyone over 55 noticing a new normal</h4><p>Age related muscle loss is real. Roughly 3 to 5% per decade. It is reversible.</p></div>
+      <span class="chev" aria-hidden="true">→</span>
+    </div>
+    <div class="who-card reveal" data-stagger="5">
+      <span class="n">06</span>
+      <div class="b"><h4>People who have tried Kegels for a year plus</h4><p>Voluntary contractions cannot reach the deep stabilizers. HIFEM can.</p></div>
+      <span class="chev" aria-hidden="true">→</span>
+    </div>
+  </div>
+</section>
+
+<!-- SESSION -->
+<section class="session" id="session">
+  <div class="session-l">
+    <div class="eyeline reveal"><span class="n">04</span><span class="r"></span><span class="t">What a session looks like</span></div>
+    <h2 class="reveal" data-stagger="1">Thirty minutes from your front door to back in your car.</h2>
+    <p class="reveal" data-stagger="2">This is what a Tuesday morning at our Boca Raton office actually looks like. No surprises.</p>
+    <div class="session-img reveal-zoom" data-stagger="3"></div>
+  </div>
+  <div class="session-r">
+    <div class="step reveal" data-stagger="0">
+      <div class="step-n"><span class="a">1</span><span class="b">step</span></div>
+      <div class="step-b"><h3>Check in and quick screen</h3><p>Pelvic floor strength check, blood pressure, intensity baseline.</p></div>
+    </div>
+    <div class="step reveal" data-stagger="1">
+      <div class="step-n"><span class="a">2</span><span class="b">step</span></div>
+      <div class="step-b"><h3>Sit on the chair (fully clothed)</h3><p>About 11,000 supramaximal contractions. Read, scroll, or close your eyes.</p></div>
+    </div>
+    <div class="step reveal" data-stagger="2">
+      <div class="step-n"><span class="a">3</span><span class="b">step</span></div>
+      <div class="step-b"><h3>Walk out debrief</h3><p>Dr. Jean Pierre notes today's intensity, books the next visit, and you are out the door.</p></div>
+    </div>
+    <div class="step reveal" data-stagger="3">
+      <div class="step-n"><span class="a">4</span><span class="b">step</span></div>
+      <div class="step-b"><h3>Repeat 2× per week for three weeks</h3><p>Most patients describe a noticeable change between session 3 and 4.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof" id="results">
+  <div class="proof-bg"></div>
+  <div class="proof-over"></div>
+  <div class="proof-grid">
+    <div class="proof-l">
+      <div class="eyeline green reveal"><span class="n">05</span><span class="r"></span><span class="t">Results</span></div>
+      <h2 class="reveal" data-stagger="1">Three numbers that defend the chair.</h2>
+      <p class="reveal" data-stagger="2">Pulled from peer reviewed Emsella efficacy studies and more than 600,000 documented sessions worldwide. We hand you the full bibliography on visit one.</p>
+    </div>
+    <div class="proof-r">
+      <div class="proof-row reveal" data-stagger="0"><div class="n" data-count="68" data-suffix="%">0%</div><div class="b"><h4>Symptom improvement at 6 months</h4><p>Peer reviewed Emsella efficacy data.</p></div></div>
+      <div class="proof-row reveal" data-stagger="1"><div class="n">3×</div><div class="b"><h4>More effective than traditional EMS</h4><p>HIFEM® penetrates 8 cm into deep tissue. Surface stim does not.</p></div></div>
+      <div class="proof-row reveal" data-stagger="2"><div class="n" data-count="87" data-suffix="%">0%</div><div class="b"><h4>Reduced pad use after full series</h4><p>Reported across 600,000 plus Emsella sessions worldwide.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO TESTIMONIAL -->
+<section class="vid" id="video">
+  <h2 class="reveal">Hear what patients say.</h2>
+  <p class="reveal" data-stagger="1">A real story from a real patient, in their own words.</p>
+  <div class="vid-frame reveal-zoom" data-stagger="2">
+    <video controls preload="none" playsinline poster="images/video-poster.jpg">
+      <source src="images/video-testimonials.mp4" type="video/mp4">
+      Sorry, your browser does not support embedded videos.
+    </video>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="rev" id="reviews">
+  <div class="rev-head">
+    <div class="rev-hl">
+      <div class="eyeline reveal"><span class="n">06</span><span class="r"></span><span class="t">From 85 Google reviews</span></div>
+      <h2 class="reveal" data-stagger="1">Stories patients leave us, in their own words.</h2>
+    </div>
+    <div class="rev-hr reveal-zoom" data-stagger="2">
+      <div class="a">5.0</div>
+      <div class="b">★★★★★ · 85 reviews</div>
+    </div>
+  </div>
+  <div class="rev-body">
+    <article class="rev-card a reveal" data-stagger="0">
+      <div>
+        <span class="rev-tag">Felt heard</span>
+        <p class="rev-q" style="margin-top:14px">"Truly grateful for the care. Dr. Gregory's intuition, patience, and ability to actually listen made me feel understood and confident the whole way through."</p>
+      </div>
+      <div class="rev-by">
+        <span class="rev-av" aria-hidden="true" style="background:#1A73E8">JS</span>
+        <div class="rev-nm"><div class="a">Japinder Sahi</div><div class="b">★★★★★ · Boca Raton · Mar 2026</div></div>
+      </div>
+    </article>
+    <article class="rev-card b reveal" data-stagger="1">
+      <div>
+        <span class="rev-tag">Personable</span>
+        <p class="rev-q" style="margin-top:14px">"Did I mention how personable the doctor is? Every visit feels personal, the ambiance is calm, and the office is genuinely clean."</p>
+      </div>
+      <div class="rev-by">
+        <span class="rev-av" aria-hidden="true" style="background:#D93025">MR</span>
+        <div class="rev-nm"><div class="a">Maria R.</div><div class="b">★★★★★ · Boca Raton · 2026</div></div>
+      </div>
+    </article>
+    <article class="rev-card c reveal" data-stagger="2">
+      <div>
+        <span class="rev-tag">Warm welcome</span>
+        <p class="rev-q" style="margin-top:14px">"Dr. Jean Pierre's attentive care and warm welcome every single visit. After years of trying everything, his approach is the only one that finally moved the needle."</p>
+      </div>
+      <div class="rev-by">
+        <span class="rev-av" aria-hidden="true" style="background:#188038">AL</span>
+        <div class="rev-nm"><div class="a">Alicia L.</div><div class="b">★★★★★ · Boca Raton · Mar 2026</div></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="comp">
+  <div class="comp-head">
+    <div class="comp-hl">
+      <div class="eyeline reveal"><span class="n">07</span><span class="r"></span><span class="t">The comparison</span></div>
+      <h2 class="reveal" data-stagger="1">Why Emsella outperforms the alternatives.</h2>
+    </div>
+    <div class="comp-hr reveal" data-stagger="2">Numbers pulled from peer reviewed sources. The full bibliography is in your welcome packet.</div>
+  </div>
+  <div class="tbl reveal-zoom">
+    <div class="tbl-head">
+      <div>Dimension</div>
+      <div class="em"><span>EMSELLA</span></div>
+      <div>Daily Kegels</div>
+      <div>Surgery (sling)</div>
+      <div>At home EMS</div>
+    </div>
+    <div class="tbl-row"><div>Effectiveness</div><div class="em">68% at 6 mo</div><div>~30% adherence</div><div>~85% (invasive)</div><div>~3× weaker</div></div>
+    <div class="tbl-row"><div>Time invested</div><div class="em">28 min × 6</div><div>10 to 15 min, daily, forever</div><div>2 hr surgical</div><div>20 min daily, indefinitely</div></div>
+    <div class="tbl-row"><div>Downtime</div><div class="em">None</div><div>None</div><div>4 to 6 weeks recovery</div><div>None</div></div>
+    <div class="tbl-row"><div>Longevity of results</div><div class="em">1 yr plus, with touch up</div><div>Stops when you do</div><div>5 to 10 yrs mesh</div><div>Stops when you do</div></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="price" id="pricing">
+  <div class="price-head">
+    <div class="price-hl">
+      <div class="eyeline reveal"><span class="n">08</span><span class="r"></span><span class="t">Pricing</span></div>
+      <h2 class="reveal" data-stagger="1">Three packages. Every price on this page.</h2>
+    </div>
+    <div class="price-hr reveal" data-stagger="2">
+      <div class="chip"><span class="d"></span>FSA + HSA accepted</div>
+      <div class="chip"><span class="d"></span>CareCredit 0% APR</div>
+    </div>
+  </div>
+  <div class="price-grid">
+    <div class="pcard reveal" data-stagger="0">
+      <div class="n">Try it visit</div>
+      <div class="p"><span class="a">$99</span><span class="b">first visit · May only</span></div>
+      <div class="d">30 minute consult and a single Emsella session. See if your body responds before you commit.</div>
+      <a class="pcard-cta" href="#contact">Book consultation</a>
+    </div>
+    <div class="pcard b reveal" data-stagger="1">
+      <span class="pcard-badge">BEST FIT · 9 of 10 patients</span>
+      <div class="n">Full series</div>
+      <div class="p"><span class="a">$1,495</span><span class="b">6 sessions · $249 ea.</span></div>
+      <div class="d">Clinically recommended dose. Two per week for three weeks. Free touch up at month 9.</div>
+      <a class="pcard-cta" href="#contact">Reserve series</a>
+    </div>
+    <div class="pcard reveal" data-stagger="2">
+      <div class="n">Membership</div>
+      <div class="p"><span class="a">$129</span><span class="b">/ month after series</span></div>
+      <div class="d">Series included, plus one maintenance session per month and 20% off laser add ons.</div>
+      <a class="pcard-cta" href="#contact">Talk about membership</a>
+    </div>
+  </div>
+</section>
+
+<!-- DOCTOR -->
+<section class="doc" id="doctor">
+  <div class="doc-l">
+    <div class="eyeline reveal"><span class="n">09</span><span class="r"></span><span class="t">Your doctor</span></div>
+    <h2 class="reveal" data-stagger="1">Dr. Gregory Jean-Pierre</h2>
+    <p class="doc-role reveal" data-stagger="2">DC, ATC · NUCCA Association member · Founder, Upper Cervical Institute of Florida</p>
+    <p class="doc-bio reveal" data-stagger="3">Dr. Gregory Jean-Pierre received his Doctor of Chiropractic degree from Logan University in Chesterfield, MO, and his undergraduate degree in Sports Medicine and Athletic Training from Barry University in Miami Shores, FL. He completed 8 years of NUCCA Chiropractic training through an internship in Chesapeake, VA and a residency in White Plains, NY.</p>
+    <p class="doc-bio reveal" data-stagger="4">A migraine sufferer for 20 years, Dr. Jean-Pierre experienced first-hand the healing effects of NUCCA care. That is why he has dedicated himself to delivering precise, gentle, evidence-based care, and to helping others heal naturally.</p>
+    <p class="doc-bio reveal" data-stagger="5">Outside the office, he is a husband and father of two sons. You will find him building, coaching soccer, and spending quality time at the beach with his family.</p>
+    <div class="doc-chips reveal" data-stagger="6">
+      <span class="doc-chip">Doctor of Chiropractic · Logan University</span>
+      <span class="doc-chip">BS Sports Medicine and Athletic Training · Barry University</span>
+      <span class="doc-chip">8 years NUCCA internship and residency</span>
+      <span class="doc-chip">Active NUCCA Association member</span>
+    </div>
+    <div class="doc-ctas reveal" data-stagger="7">
+      <a class="doc-cta p" href="#contact">Book with Dr. Jean-Pierre</a>
+      <img class="doc-badge" src="images/badge2.webp" alt="NUCCA certified doctor badge" />
+    </div>
+  </div>
+  <div class="doc-r reveal-zoom">
+    <div class="doc-img"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="cnt" id="contact">
+  <div class="cnt-l reveal-left">
+    <div class="eyeline"><span class="n">10</span><span class="r"></span><span class="t">Request a consultation</span></div>
+    <h2>We call back within one business day.</h2>
+    <form class="cnt-form" id="cntForm" novalidate>
+      <div class="cnt-row">
+        <div class="field"><label for="cntFirst">First name</label><input id="cntFirst" type="text" placeholder="Jane" required></div>
+        <div class="field"><label for="cntLast">Last name</label><input id="cntLast" type="text" placeholder="Doe" required></div>
+      </div>
+      <div class="cnt-row">
+        <div class="field"><label for="cntEmail">Email</label><input id="cntEmail" type="email" placeholder="you@example.com" required></div>
+        <div class="field"><label for="cntPhone">Phone</label><input id="cntPhone" type="tel" placeholder="(555) 555 5555" required></div>
+      </div>
+      <div class="field"><label for="cntMsg">What brings you in?</label><textarea id="cntMsg" placeholder="Postpartum, post prostate, stress incontinence, just curious…"></textarea></div>
+      <button class="cnt-btn" type="submit">Request consultation →</button>
+    </form>
+  </div>
+  <div class="cnt-r reveal">
+    <div class="cnt-map" aria-label="Clinic location">
+      <iframe
+        title="Upper Cervical Institute of Florida location"
+        src="https://www.google.com/maps?q=7301A+W+Palmetto+Park+Rd+%23304b,+Boca+Raton,+FL+33433&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen></iframe>
+    </div>
+    <div class="cnt-info">
+      <div class="cnt-info-l">
+        <h3>Upper Cervical Institute of Florida</h3>
+        <p class="cnt-line">7301A W Palmetto Park Rd #304b, Boca Raton, FL 33433</p>
+        <a class="cnt-line" href="tel:+15617944826">(561) 794-4826</a>
+        <a class="cnt-line" href="mailto:info@uppercervicalinstitute.com">info@uppercervicalinstitute.com</a>
+        <div class="cnt-hours">
+          <div><span class="a">Monday</span><span class="b">9am – 7pm</span></div>
+          <div><span class="a">Tuesday</span><span class="b">9am – 3:30pm</span></div>
+          <div class="closed"><span class="a">Wednesday</span><span class="b">Closed</span></div>
+          <div><span class="a">Thursday</span><span class="b">9am – 7pm</span></div>
+          <div><span class="a">Friday</span><span class="b">9am – 1pm</span></div>
+          <div class="closed"><span class="a">Saturday</span><span class="b">Closed</span></div>
+          <div class="closed"><span class="a">Sunday</span><span class="b">Closed</span></div>
+        </div>
+      </div>
+      <div class="cnt-info-r" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-head">
+    <div class="faq-hl">
+      <div class="eyeline reveal"><span class="n">11</span><span class="r"></span><span class="t">You probably have questions</span></div>
+      <h2 class="reveal" data-stagger="1">We answered the ones our competitors avoid.</h2>
+    </div>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-col">
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">Does it actually hurt?<span class="ic">+</span></div>
+        <div class="faq-a"><p>No. You feel a deep tingling and the pelvic muscles contracting on their own. Some patients say the sensation is strange the first 30 seconds, but never painful. We dial intensity to your comfort level and can lower it at any point.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">Is it safe? Side effects?<span class="ic">+</span></div>
+        <div class="faq-a"><p>Emsella is FDA cleared and noninvasive. Most patients experience no side effects. A few report mild muscle fatigue after the first session, similar to a hard workout. There is no anesthesia, no incision, and no medication.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">Is Emsella covered by insurance?<span class="ic">+</span></div>
+        <div class="faq-a"><p>Not yet in most plans. We accept FSA and HSA dollars, and we offer CareCredit at 0% APR for 6 or 12 months. The full series total is below most surgical co pays.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">How many sessions will I need?<span class="ic">+</span></div>
+        <div class="faq-a"><p>The clinical protocol is six 28 minute sessions over three weeks. Severe cases may add two to six maintenance sessions. We tell you which after your first visit.</p></div>
+      </div>
+    </div>
+    <div class="faq-col">
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">When will I see results?<span class="ic">+</span></div>
+        <div class="faq-a"><p>Most patients notice a real change between session 3 and 4. Some report a small improvement after session one. Peer reviewed data shows 68% symptom improvement at six months.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">Can men use Emsella?<span class="ic">+</span></div>
+        <div class="faq-a"><p>Yes. Emsella is FDA cleared for men and women. Men post prostatectomy and men with stress incontinence respond well. You stay fully clothed during the session.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" role="button" tabindex="0">Does Emsella help with sex?<span class="ic">+</span></div>
+        <div class="faq-a"><p>Patients commonly report stronger orgasms, improved arousal, and more sensation after a full series. The same muscles that control continence are responsible for sexual function. Strengthening one tends to strengthen the other.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="foot-top">
+    <div class="foot-l">
+      <a class="foot-logo" href="#"><img src="images/logo-white.svg" alt="Upper Cervical Institute of Florida" /></a>
+      <p>NUCCA + Emsella + Emvital Laser.
+Boca Raton's quiet, evidence driven practice.</p>
+      <div class="foot-social" aria-label="Social media">
+        <a href="https://www.instagram.com/uppercervicalinstitute/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://www.facebook.com/UCIFL" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.6V4.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8V14h2.7v8h3z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UCgtIx53oPE10VBE3TS2TmoQ" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8C22 15.2 22 12 22 12s0-3.2-.4-4.8zM10 15V9l5.2 3-5.2 3z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@uppercervicalinstitute" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 2c.3 1.4 1 2.7 2.1 3.6 1.1.9 2.5 1.4 3.9 1.4v3.3a8 8 0 0 1-6-2.7v6.9a6.5 6.5 0 1 1-6.5-6.5c.3 0 .6 0 .9.1v3.4a3.2 3.2 0 1 0 2.3 3.1V2h3.3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="foot-col">
+      <h4>Visit</h4>
+      <p>7301A W Palmetto Park Rd #304b
+Boca Raton, FL 33433
+(561) 794 4826</p>
+    </div>
+    <div class="foot-col">
+      <h4>Hours</h4>
+      <p>Mon · Thu  9 to 7
+Tue  9 to 3:30
+Fri  9 to 1
+Wed · Sat · Sun  Closed</p>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <div class="foot-cop">© 2026 Upper Cervical Institute of Florida. All rights reserved.</div>
+    <div class="foot-leg"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">SMS Terms</a></div>
+  </div>
+</footer>
+
+<a class="float-cta" id="floatCta" href="#contact"><span>Book consultation</span><span>→</span></a>
+
+<script>
+(() => {
+  /* Reveal on enter */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -80px 0px', threshold: 0.05 });
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-zoom').forEach(el => io.observe(el));
+
+  /* Number count up */
+  const fmt = (n) => n >= 1000 ? n.toLocaleString('en-US') : String(n);
+  const counters = document.querySelectorAll('[data-count]');
+  const cIO = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.dataset.suffix || '';
+      const dur = 1400;
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const v = Math.round(target * eased);
+        el.textContent = fmt(v) + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      cIO.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(el => cIO.observe(el));
+
+  /* Float CTA after hero */
+  const float = document.getElementById('floatCta');
+  const hero = document.getElementById('hero');
+  const fIO = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) float.classList.add('show');
+      else float.classList.remove('show');
+    });
+  }, { threshold: 0.2 });
+  fIO.observe(hero);
+
+  /* Who cards: click to persist the highlighted state */
+  document.querySelectorAll('.who-card').forEach((card) => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('on');
+    });
+  });
+
+  /* FAQ accordion */
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    const q = item.querySelector('.faq-q');
+    const ic = item.querySelector('.ic');
+    const toggle = () => {
+      const open = item.classList.toggle('open');
+      ic.textContent = open ? '−' : '+';
+    };
+    q.addEventListener('click', toggle);
+    q.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+
+  /* Quiz */
+  const questions = [
+    {
+      q: 'What brings you to Emsella today?',
+      a: [
+        { t: 'Postpartum recovery (within 5 years)', s: 'post' },
+        { t: 'Perimenopause or menopause changes', s: 'meno' },
+        { t: 'Post prostate surgery', s: 'pros' },
+        { t: 'Athletic performance and prevention', s: 'ath' }
+      ]
+    },
+    {
+      q: 'How often does leakage interrupt your day?',
+      a: [
+        { t: 'A few times a week, manageable', s: 'mild' },
+        { t: 'Daily. Workouts and laughing trigger it', s: 'mod' },
+        { t: 'Constantly. I plan my life around it', s: 'sev' },
+        { t: 'Rarely, but I want to prevent it', s: 'prev' }
+      ]
+    },
+    {
+      q: 'How long have symptoms been going on?',
+      a: [
+        { t: 'Less than 6 months', s: 'new' },
+        { t: '6 months to 2 years', s: 'mid' },
+        { t: '2 to 5 years', s: 'long' },
+        { t: 'More than 5 years', s: 'chronic' }
+      ]
+    }
+  ];
+
+  let idx = 0;
+  const answers = new Array(questions.length).fill(null);
+  const qText = document.getElementById('qText');
+  const qAns = document.getElementById('qAnswers');
+  const qDots = document.getElementById('qDots');
+  const qProg = document.getElementById('qProgress');
+  const qBack = document.getElementById('qBack');
+  const qNext = document.getElementById('qNext');
+  const qResult = document.getElementById('qResult');
+  const qrBody = document.getElementById('qrBody');
+  const qrTitle = document.getElementById('qrTitle');
+
+  const letters = ['A','B','C','D'];
+  function render() {
+    qResult.classList.remove('on');
+    qText.style.display = '';
+    qAns.style.display = '';
+    qDots.style.display = '';
+    qNext.style.display = '';
+    if (idx >= questions.length) { showResult(); return; }
+    const Q = questions[idx];
+    qProg.textContent = 'Question ' + (idx+1) + ' of ' + questions.length;
+    qText.textContent = Q.q;
+    qDots.innerHTML = '';
+    for (let i = 0; i < questions.length; i++) {
+      const d = document.createElement('span');
+      d.className = 'quiz-dot' + (i <= idx ? ' on' : '');
+      qDots.appendChild(d);
+    }
+    qAns.innerHTML = '';
+    Q.a.forEach((opt, i) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'quiz-a' + (answers[idx] === i ? ' on' : '');
+      btn.innerHTML = '<span class="k">'+letters[i]+'</span><span>'+opt.t+'</span>';
+      btn.addEventListener('click', () => {
+        answers[idx] = i;
+        [...qAns.children].forEach((b, j) => b.classList.toggle('on', j === i));
+      });
+      qAns.appendChild(btn);
+    });
+    qBack.style.visibility = idx === 0 ? 'hidden' : '';
+    qNext.querySelector('span').textContent = idx === questions.length - 1 ? 'See my result' : 'Continue';
+  }
+
+  function showResult() {
+    qText.style.display = 'none';
+    qAns.style.display = 'none';
+    qProg.textContent = 'Done · ' + questions.length + ' of ' + questions.length;
+    qNext.style.display = 'none';
+    qResult.classList.add('on');
+    const tag = answers[0] != null ? questions[0].a[answers[0]].s : 'post';
+    const sev = answers[1] != null ? questions[1].a[answers[1]].s : 'mod';
+    const map = {
+      post: ['Strong fit. Postpartum response is one of Emsella\'s most studied indications.', '6 session protocol'],
+      meno: ['Strong fit. HIFEM® can offset some of the laxity caused by estrogen drop.', '6 to 8 session protocol'],
+      pros: ['Strong fit. Post prostate continence response is well documented.', '8 session protocol'],
+      ath: ['Excellent prevention fit. Athletes with pelvic floor weakness are an ideal candidate group.', '6 session protocol']
+    };
+    const sevMap = {
+      mild: 'Mild presentation. A 6 session series is typically enough.',
+      mod: 'Moderate presentation. The full 6 session series is your dose.',
+      sev: 'Severe presentation. Plan for 8 sessions plus monthly maintenance.',
+      prev: 'Preventive case. The try-it visit is the right entry point.'
+    };
+    const top = map[tag] || map.post;
+    qrTitle.textContent = top[1];
+    qrBody.textContent = top[0] + ' ' + (sevMap[sev] || sevMap.mod) + ' Lock in May\'s first visit pricing on the next screen.';
+  }
+
+  qBack.addEventListener('click', () => { if (idx > 0) { idx--; render(); }});
+  qNext.addEventListener('click', () => {
+    if (idx < questions.length - 1) { idx++; render(); }
+    else { idx++; showResult(); }
+  });
+  render();
+
+  /* Smooth focus on contact form CTA */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  /* Contact form (no real submit, just acknowledge) */
+  document.getElementById('cntForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector('.cnt-btn');
+    btn.textContent = 'Thank you. We will call you within one business day.';
+    btn.style.background = 'var(--brand-green)';
+    setTimeout(() => {
+      btn.textContent = 'Request consultation →';
+      btn.style.background = '';
+      e.target.reset();
+    }, 4500);
+  });
+})();
+</script>
+</body>
+</html>
