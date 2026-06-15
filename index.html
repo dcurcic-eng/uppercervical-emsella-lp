@@ -365,6 +365,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .field textarea{min-height:84px;resize:vertical;border-radius:16px}
   .field input:focus,.field textarea:focus{border-color:var(--brand-green);background:#fff;box-shadow:0 0 0 4px rgba(101,179,46,.15)}
   .field input::placeholder,.field textarea::placeholder{color:var(--text-soft)}
+  .cnt-consent{display:flex;align-items:flex-start;gap:10px;margin-top:2px}
+  .cnt-consent-cb{flex:0 0 auto;width:18px;height:18px;margin-top:2px;accent-color:var(--brand-green);cursor:pointer}
+  .cnt-consent-text{font:400 12px/1.5 var(--font-body);color:var(--text-soft);cursor:pointer}
   .cnt-btn{display:flex;align-items:center;justify-content:center;height:52px;border-radius:26px;background:var(--brand-navy-deep);color:#fff;font:500 15px/1 var(--font-ui);transition:transform var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out)}
   .cnt-btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(14,29,62,.3)}
   .cnt-r{display:flex;flex-direction:column;gap:14px}
@@ -988,6 +991,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="field"><label for="cntPhone">Phone</label><input id="cntPhone" type="tel" placeholder="(555) 555 5555" required></div>
       </div>
       <div class="field"><label for="cntMsg">What brings you in?</label><textarea id="cntMsg" placeholder="Intimacy, postpartum rebuild, menopause changes, leakage, just curious…"></textarea></div>
+      <div class="cnt-consent">
+        <input id="cntConsent" name="newsletter" type="checkbox" required class="cnt-consent-cb">
+        <label for="cntConsent" class="cnt-consent-text"><i>By submitting this form, you agree to receive marketing text messages, alerts, and notifications from Upper Cervical Institute of Florida. Message frequency may vary. Rates may be applied. You can opt out at any time by replying STOP.</i></label>
+      </div>
       <button class="cnt-btn" type="submit">Book consultation →</button>
     </form>
   </div>
@@ -1306,18 +1313,118 @@ Wed · Sat · Sun  Closed</p>
     });
   });
 
-  /* Contact form (no real submit, just acknowledge) */
-  document.getElementById('cntForm').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = e.target.querySelector('.cnt-btn');
-    btn.textContent = 'Thank you. We will call you within one business day.';
-    btn.style.background = 'var(--brand-green)';
-    setTimeout(() => {
-      btn.textContent = 'Book consultation →';
-      btn.style.background = '';
-      e.target.reset();
-    }, 4500);
-  });
+  /* Contact form — submits to AEVA API */
+  (function () {
+    const form = document.getElementById('cntForm');
+    if (!form) return;
+    const submitBtn = form.querySelector('.cnt-btn');
+
+    // Inject an error element (keeps existing markup/styles intact)
+    let errEl = form.querySelector('#form-error');
+    if (!errEl) {
+      errEl = document.createElement('div');
+      errEl.id = 'form-error';
+      errEl.setAttribute('role', 'alert');
+      errEl.setAttribute('aria-live', 'polite');
+      errEl.style.cssText = 'display:none;color:#c0392b;font-size:14px;margin:6px 0 2px;';
+      submitBtn.parentNode.insertBefore(errEl, submitBtn);
+    }
+    function showError(msg) {
+      errEl.textContent = msg;
+      errEl.style.display = msg ? 'block' : 'none';
+    }
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      showError('');
+      submitBtn.disabled = true;
+
+      const first_name = form.querySelector('#cntFirst').value?.trim() || '';
+      const last_name = form.querySelector('#cntLast').value?.trim() || '';
+      const email = form.querySelector('#cntEmail').value?.trim() || '';
+      const phone = (form.querySelector('#cntPhone').value || '').replace(/\D/g, '');
+      const message = form.querySelector('#cntMsg').value?.trim() || '';
+      const checkbox = form.querySelector('#cntConsent')?.checked ? 'on' : '';
+
+      const emailRe = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
+      if (!emailRe.test(email)) {
+        showError('Please enter a valid email address.');
+        submitBtn.disabled = false;
+        return;
+      }
+
+      const phoneRe = /^[0-9]{10}$/;
+      if (!phoneRe.test(phone)) {
+        showError('Please enter a 10-digit US phone number.');
+        submitBtn.disabled = false;
+        return;
+      }
+
+      if (!checkbox) {
+        showError('Please agree to receive messages to continue.');
+        submitBtn.disabled = false;
+        return;
+      }
+
+      const fd = new FormData();
+      fd.append('first_name', first_name);
+      fd.append('last_name', last_name);
+      fd.append('phone', `+1${phone}`);
+      fd.append('email', email);
+      fd.append('checkbox', checkbox);
+      fd.append('organization', '942a9091-2f6c-486f-98a1-6676352c2fdb');
+      fd.append('form', '492');
+      fd.append('message', message);
+      fd.append('form_location', window.location.href);
+
+      // Detect ad tracking params from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const trackingMap = {
+        gclid: 'google',
+        wbraid: 'google',
+        gbraid: 'google',
+        fbclid: 'meta',
+        ttclid: 'tiktok',
+      };
+      let trackingParam = '';
+      let adSource = 'other';
+      for (const [param, source] of Object.entries(trackingMap)) {
+        const val = urlParams.get(param);
+        if (val) {
+          trackingParam = val;
+          adSource = source;
+          break;
+        }
+      }
+      fd.append('tracking_param', trackingParam);
+      fd.append('ad_source', adSource);
+
+      try {
+        const res = await fetch(
+          'https://api.aevadigital.com/api/v1/contacts/add_contact_from_form/',
+          { method: 'POST', body: fd }
+        );
+
+        if (!res.ok) {
+          const txt = await res.text().catch(() => res.statusText);
+          throw new Error(txt || 'Server error');
+        }
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'event': 'form-success' });
+
+        form.style.display = 'none';
+        const thankYou = document.createElement('div');
+        thankYou.className = 'form-success-message';
+        thankYou.innerHTML = '<h3>Thank You!</h3><p>Your consultation request has been received. We\'ll call you within one business day.</p>';
+        form.parentNode.insertBefore(thankYou, form.nextSibling);
+      } catch (err) {
+        console.error(err);
+        showError('Submission failed — please try again.');
+        submitBtn.disabled = false;
+      }
+    });
+  })();
 })();
 </script>
 </body>
